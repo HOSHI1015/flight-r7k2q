@@ -217,7 +217,7 @@ const THEMES = {
   light: { bg: 0xeef2f6, t0: 0xf5f7fa, t1: 0xc2d1df, cMinor: [0x86a8c0, 0.7], cMain: [0x2a6a96, 0.85], rMinor: [0x97a3af, 0.85], rMajor: [0x44566a, 0.95],
            rail: [0x7a4cc9, 0.95], water: [0x1f7fe0, 0.95], bldg: [0xa3b0bd, 0.85], ink: 0x12263a, additive: false },
 };
-let themeName = (() => { try { return localStorage.getItem("flightTheme") === "light" ? "light" : "dark"; } catch (e) { return "dark"; } })();
+let themeName = "light";  // 必ずライトで始める
 let TH = THEMES[themeName];
 document.body.classList.toggle("light", themeName === "light");
 const MAT = { tinWires: [] };  // テーマで色を変える材質
